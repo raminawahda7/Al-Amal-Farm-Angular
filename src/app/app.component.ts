@@ -62,6 +62,5 @@ export class AppComponent implements OnInit {
   }
   showCartResults() {
     alert(`You have ${this.cartItemCount} items in your cart.`);
-    this.openCartModal();
   }
 }

@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Product } from '../models/product.model'; // Assuming product model location
-import { CartService } from 'src/app/services/cart.service'; // Assuming cart service location
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Assuming using NgbModal
+import { Product } from '../models/product.model';
 import { CartEventsService } from 'src/app/services/cart-event.service';
 
 @Component({
@@ -29,6 +27,6 @@ export class ProductComponent {
 
   addToCart() {
     this.cartEventsService.addToCart(this.product, this.quantity);
-    this.cartItemCountChange.emit(this.quantity); // Emit quantity for potential display
+    this.cartItemCountChange.emit(this.quantity);
   }
 }
