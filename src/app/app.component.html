@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="toggleFormVisibility()">Add Product</button>
+    <button class="btn btn-secondary" (click)="showCartResults()">View Cart Summary</button>
+
+       <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <app-add-product-form></app-add-product-form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <app-cart-modal #cartContent></app-cart-modal> </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <app-product-list [products]="products"></app-product-list>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" (click)="toggleFormVisibility()">Add Product</button>
+
+      <div class="modal" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <app-add-product-form (formSubmitted)="onFormSubmitted(); closeModal()"></app-add-product-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Fix the Style Issue -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" (click)="toggleFormVisibility()">Add Product</button>
+
+      <div class="modal" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel"
+        aria-hidden="true">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <app-product-list [products]="products"></app-product-list>
+    </div>
+  </div>
+</div> -->
